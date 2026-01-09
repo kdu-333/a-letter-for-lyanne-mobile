@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Courier+Prime&display=swap"
         rel="stylesheet">
-
     <style>
         body {
             margin: 0;
@@ -22,7 +21,7 @@
 
         .container {
             width: 100%;
-            max-width: 420px;
+            max-width: 390px;
             background: #fffdf6;
             border-radius: 18px;
             padding: 28px 20px 30px;
@@ -90,7 +89,6 @@
             fill: white;
         }
 
-        /* Right side lilies only */
         .lily {
             position: absolute;
             width: 100px;
@@ -100,107 +98,94 @@
             z-index: 1;
         }
 
-        /* Varied top positions for more design */
         .r1 {
-            right: -90px;
+            right: -70px;
             top: -20px;
             --rot: 5deg;
         }
 
         .r2 {
-            right: -85px;
+            right: -50px;
             top: 50px;
             --rot: -3deg;
         }
 
         .r3 {
-            right: -100px;
+            right: -90px;
             top: 120px;
             --rot: 4deg;
         }
 
         .r4 {
-            right: -95px;
+            right: -60px;
             top: 190px;
             --rot: -5deg;
         }
 
         .r5 {
-            right: -90px;
+            right: -80px;
             top: 260px;
             --rot: 3deg;
         }
 
         .r6 {
-            right: -85px;
+            right: -50px;
             top: 330px;
             --rot: -2deg;
         }
 
         .r7 {
-            right: -95px;
+            right: -70px;
             top: 400px;
             --rot: 6deg;
         }
 
         .r8 {
-            right: -90px;
+            right: -60px;
             top: 470px;
             --rot: -4deg;
         }
 
         .r9 {
-            right: -100px;
+            right: -80px;
             top: 540px;
             --rot: 2deg;
         }
 
         .r10 {
-            right: -85px;
+            right: -50px;
             top: 610px;
             --rot: -3deg;
         }
 
         .r11 {
-            right: -95px;
+            right: -70px;
             top: 680px;
             --rot: 4deg;
         }
 
         .r12 {
-            right: -90px;
+            right: -60px;
             top: 750px;
             --rot: -5deg;
         }
 
         .r13 {
-            right: -100px;
+            right: -80px;
             top: 820px;
             --rot: 3deg;
         }
 
         .r14 {
-            right: -85px;
+            right: -50px;
             top: 890px;
-            --rot: -2deg;
-        }
-
-        .r15 {
-            right: -95px;
-            top: 960px;
-            --rot: 5deg;
-        }
-
-        .r16 {
-            right: -90px;
-            top: 1030px;
             --rot: -4deg;
         }
 
-        .r17 {
-            right: -100px;
-            top: 1100px;
-            --rot: 2deg;
+        .r15 {
+            right: -70px;
+            top: 960px;
+            --rot: 5deg;
         }
 
         @keyframes float {
@@ -242,7 +227,6 @@
         <source src="music.mp3" type="audio/mp3">
     </audio>
 
-    <!-- Right side lilies only -->
     <img src="lilypng.png" class="lily r1">
     <img src="lilypng.png" class="lily r2">
     <img src="lilypng.png" class="lily r3">
@@ -258,37 +242,25 @@
     <img src="lilypng.png" class="lily r13">
     <img src="lilypng.png" class="lily r14">
     <img src="lilypng.png" class="lily r15">
-    <img src="lilypng.png" class="lily r16">
-    <img src="lilypng.png" class="lily r17">
 
     <div class="container">
         <h1 class="title">Welcome Back to You!</h1>
-
         <div class="letter">
             <p>Dear <b>Lyanne Lei</b> ng Mundo,</p>
-            <p>
-                Even though I’ve only known you for a short time, it’s been enough to see how determined and capable you
+            <p>Even though I’ve only known you for a short time, it’s been enough to see how determined and capable you
                 are. As you continue your journey, I just want to wish you all the best. May your dreams slowly turn
-                into reality, and may every goal you set for yourself be reached in your own time.
-            </p>
-            <p>
-                I also want to take a moment to thank you. Thank you for being inspiring, for sharing your energy and
+                into reality, and may every goal you set for yourself be reached in your own time.</p>
+            <p>I also want to take a moment to thank you. Thank you for being inspiring, for sharing your energy and
                 positivity, and for reminding me of the importance of kindness and dedication. Your presence has made a
-                difference, even in the little things, and I’m grateful to know you.
-            </p>
-            <p>
-                Life is full of moments that can feel confusing, overwhelming, or like we don’t know which way to go.
-                But always remember, you can lean on people who care about you—including me. I’m always ready to listen
-                (and give unsolicited advice if needed HAHAHAHAHAHAA).
-            </p>
-            <p>
-                Keep believing in yourself, keep moving forward, and never forget how much potential you have.
+                difference, even in the little things, and I’m grateful to know you.</p>
+            <p>Life is full of moments that can feel confusing, overwhelming, or like we don’t know which way to go. But
+                always remember, you can lean on people who care about you—including me. I’m always ready to listen (and
+                give unsolicited advice if needed HAHAHAHAHAHAA).</p>
+            <p>Keep believing in yourself, keep moving forward, and never forget how much potential you have.
                 <b>PUHON</b> :))
             </p>
         </div>
-
         <div class="signature">— <b>Krystian Daniel Uy (sharksilog)</b></div>
-
         <div class="music">
             <button class="play-btn" onclick="document.getElementById('song').play()">
                 <svg viewBox="0 0 24 24">
@@ -302,13 +274,11 @@
     <script>
         const song = document.getElementById('song');
         song.volume = 0.25;
-
         const petalCount = 50;
         for (let i = 0; i < petalCount; i++) {
             const p = document.createElement("img");
             p.src = "petal.png";
             p.className = "petal";
-
             p.style.left = Math.random() * 100 + "vw";
             p.style.width = 10 + Math.random() * 12 + "px";
             p.style.opacity = 0.4 + Math.random() * 0.5;
@@ -321,6 +291,7 @@
             document.body.appendChild(p);
         }
     </script>
+
 </body>
 
 </html>
