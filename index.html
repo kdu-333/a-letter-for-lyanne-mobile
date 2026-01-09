@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <title>4 Lyanne lahat yan</title>
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Courier+Prime&display=swap"
@@ -33,17 +32,17 @@
             position: relative;
             z-index: 5;
             overflow: hidden;
-
-            /* Paper grain effect */
         }
 
+        /* === Paper Grain Effect === */
         .container::after {
             content: "";
             position: absolute;
             inset: 0;
             pointer-events: none;
-            background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100" height="100"%3E%3Cfilter id="noise"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noise)" opacity="0.03"/%3E%3C/svg%3E');
+            background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100" height="100"%3E%3Cfilter id="noise"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="1" numOctaves="3" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noise)" opacity="0.08"/%3E%3C/svg%3E');
             background-repeat: repeat;
+            mix-blend-mode: multiply;
         }
 
         .title {
@@ -58,7 +57,6 @@
             font-size: 14px;
             line-height: 1.6;
             color: #3b2f2f;
-            text-align: justify;
         }
 
         .signature {
@@ -106,7 +104,7 @@
             z-index: 1;
         }
 
-        /* 10 left lilies */
+        /* Left Lilies */
         .l1 {
             left: -60px;
             top: -40px;
@@ -116,68 +114,68 @@
 
         .l2 {
             left: -50px;
-            top: 60px;
+            top: 40px;
             --flip: -1;
-            --rot: 3deg;
+            --rot: 4deg;
         }
 
         .l3 {
             left: -60px;
-            top: 140px;
+            top: 120px;
             --flip: -1;
             --rot: -3deg;
         }
 
         .l4 {
             left: -50px;
-            top: 220px;
+            top: 200px;
             --flip: -1;
-            --rot: 4deg;
+            --rot: 5deg;
         }
 
         .l5 {
             left: -60px;
-            top: 300px;
+            top: 280px;
             --flip: -1;
-            --rot: -2deg;
+            --rot: -4deg;
         }
 
         .l6 {
             left: -50px;
-            top: 380px;
+            top: 360px;
             --flip: -1;
             --rot: 3deg;
         }
 
         .l7 {
             left: -60px;
-            top: 460px;
+            top: 440px;
             --flip: -1;
-            --rot: -3deg;
+            --rot: -2deg;
         }
 
         .l8 {
             left: -50px;
-            top: 540px;
+            top: 520px;
             --flip: -1;
             --rot: 4deg;
         }
 
         .l9 {
             left: -60px;
-            top: 620px;
+            top: 600px;
             --flip: -1;
-            --rot: -2deg;
+            --rot: -3deg;
         }
 
         .l10 {
             left: -50px;
-            top: 700px;
+            top: 680px;
             --flip: -1;
             --rot: 3deg;
         }
 
-        /* 10 right lilies */
+        /* Right Lilies */
         .r1 {
             right: -60px;
             top: -30px;
@@ -217,7 +215,7 @@
         .r7 {
             right: -60px;
             top: 450px;
-            --rot: 3deg;
+            --rot: 4deg;
         }
 
         .r8 {
@@ -229,7 +227,7 @@
         .r9 {
             right: -60px;
             top: 610px;
-            --rot: 4deg;
+            --rot: 3deg;
         }
 
         .r10 {
@@ -311,14 +309,13 @@
             <p>
                 Even though I’ve only known you for a short time, it’s been enough to see how determined and capable you
                 are. As you continue your journey, I just want to wish you all the best. May your dreams slowly turn
-                into reality,
-                and may every goal you set for yourself be reached in your own time.
+                into reality, and may every goal you set for yourself be reached in your own time.
             </p>
 
             <p>
                 I also want to take a moment to thank you. Thank you for being inspiring, for sharing your energy and
-                positivity,
-                and for reminding me of the importance of kindness and dedication. Your presence has made a difference,
+                positivity, and for reminding me of the importance of kindness and dedication. Your presence has made a
+                difference,
                 even in the little things, and I’m grateful to know you.
             </p>
 
