@@ -4,11 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <title>4 Lyanne lahat yan</title>
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Courier+Prime&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Courier+Prime&display=swap" rel="stylesheet">
 
     <style>
         /* === Base Mobile Styles === */
@@ -18,11 +16,10 @@
             font-family: 'Courier Prime', monospace;
             display: flex;
             justify-content: center;
-            align-items: center;
             min-height: 100vh;
-            padding: 20px 10px;
             position: relative;
             overflow-x: hidden;
+            padding: 20px 10px;
         }
 
         .container {
@@ -34,7 +31,8 @@
             box-shadow: 0 10px 25px rgba(0, 0, 0, .15);
             position: relative;
             z-index: 5;
-            text-align: center; /* centers text */
+            display: flex;
+            flex-direction: column;
         }
 
         .container:after {
@@ -47,6 +45,7 @@
 
         .title {
             font-family: 'Great Vibes', cursive;
+            text-align: center;
             font-size: 28px;
             color: #7b4f4f;
             margin-bottom: 15px;
@@ -57,6 +56,8 @@
             line-height: 1.6;
             color: #3b2f2f;
             text-align: left;
+            max-height: 80vh;
+            overflow-y: auto;
         }
 
         .signature {
@@ -97,40 +98,20 @@
         /* === Lilies === */
         .lily {
             position: absolute;
-            width: 100px;
+            width: 90px;
             opacity: .9;
             filter: blur(.2px);
             animation: float 6s ease-in-out infinite;
             z-index: 1;
         }
 
-        /* Left side lilies (10 total) */
-        .l1 { left: -60px; top: -50px; --flip:-1; --rot:-5deg; }
-        .l2 { left: -50px; top: 50px; --flip:-1; --rot:4deg; }
-        .l3 { left: -60px; top: 150px; --flip:-1; --rot:-3deg; }
-        .l4 { left: -50px; top: 250px; --flip:-1; --rot:5deg; }
-        .l5 { left: -60px; top: 350px; --flip:-1; --rot:-4deg; }
-        .l6 { left: -50px; top: 450px; --flip:-1; --rot:3deg; }
-        .l7 { left: -60px; top: 550px; --flip:-1; --rot:-2deg; }
-        .l8 { left: -50px; top: 650px; --flip:-1; --rot:4deg; }
-        .l9 { left: -60px; top: 750px; --flip:-1; --rot:-3deg; }
-        .l10 { left: -50px; top: 850px; --flip:-1; --rot:5deg; }
-
-        /* Right side lilies (10 total) */
-        .r1 { right: -60px; top: -50px; --rot:5deg; }
-        .r2 { right: -50px; top: 50px; --rot:-4deg; }
-        .r3 { right: -60px; top: 150px; --rot:3deg; }
-        .r4 { right: -50px; top: 250px; --rot:-5deg; }
-        .r5 { right: -60px; top: 350px; --rot:4deg; }
-        .r6 { right: -50px; top: 450px; --rot:-3deg; }
-        .r7 { right: -60px; top: 550px; --rot:2deg; }
-        .r8 { right: -50px; top: 650px; --rot:-4deg; }
-        .r9 { right: -60px; top: 750px; --rot:3deg; }
-        .r10 { right: -50px; top: 850px; --rot:-5deg; }
-
         @keyframes float {
-            0%, 100% { transform: translateY(0) scaleX(var(--flip,1)) rotate(var(--rot,0deg)); }
-            50% { transform: translateY(-8px) scaleX(var(--flip,1)) rotate(var(--rot,0deg)); }
+            0%, 100% {
+                transform: translateY(0) scaleX(var(--flip,1)) rotate(var(--rot,0deg));
+            }
+            50% {
+                transform: translateY(-8px) scaleX(var(--flip,1)) rotate(var(--rot,0deg));
+            }
         }
 
         /* === Petals Falling === */
@@ -145,8 +126,12 @@
         }
 
         @keyframes fall {
-            from { transform: translateX(var(--drift)) translateY(-50px) rotate(0deg); }
-            to { transform: translateX(calc(var(--drift) + var(--wind))) translateY(110vh) rotate(var(--spin)); }
+            from {
+                transform: translateX(var(--drift)) translateY(-50px) rotate(0deg);
+            }
+            to {
+                transform: translateX(calc(var(--drift) + var(--wind))) translateY(110vh) rotate(var(--spin));
+            }
         }
     </style>
 </head>
@@ -157,29 +142,29 @@
         <source src="music.mp3" type="audio/mp3">
     </audio>
 
-    <!-- Left Lilies -->
-    <img src="lilypng.png" class="lily l1">
-    <img src="lilypng.png" class="lily l2">
-    <img src="lilypng.png" class="lily l3">
-    <img src="lilypng.png" class="lily l4">
-    <img src="lilypng.png" class="lily l5">
-    <img src="lilypng.png" class="lily l6">
-    <img src="lilypng.png" class="lily l7">
-    <img src="lilypng.png" class="lily l8">
-    <img src="lilypng.png" class="lily l9">
-    <img src="lilypng.png" class="lily l10">
+    <!-- 10 Lilies Left -->
+    <img src="lilypng.png" class="lily" style="left:-60px; top:0; --flip:-1; --rot:-5deg;">
+    <img src="lilypng.png" class="lily" style="left:-55px; top:80px; --flip:-1; --rot:4deg;">
+    <img src="lilypng.png" class="lily" style="left:-60px; top:160px; --flip:-1; --rot:-3deg;">
+    <img src="lilypng.png" class="lily" style="left:-55px; top:240px; --flip:-1; --rot:5deg;">
+    <img src="lilypng.png" class="lily" style="left:-60px; top:320px; --flip:-1; --rot:-4deg;">
+    <img src="lilypng.png" class="lily" style="left:-55px; top:400px; --flip:-1; --rot:3deg;">
+    <img src="lilypng.png" class="lily" style="left:-60px; top:480px; --flip:-1; --rot:-2deg;">
+    <img src="lilypng.png" class="lily" style="left:-55px; top:560px; --flip:-1; --rot:4deg;">
+    <img src="lilypng.png" class="lily" style="left:-60px; top:640px; --flip:-1; --rot:-3deg;">
+    <img src="lilypng.png" class="lily" style="left:-55px; top:720px; --flip:-1; --rot:2deg;">
 
-    <!-- Right Lilies -->
-    <img src="lilypng.png" class="lily r1">
-    <img src="lilypng.png" class="lily r2">
-    <img src="lilypng.png" class="lily r3">
-    <img src="lilypng.png" class="lily r4">
-    <img src="lilypng.png" class="lily r5">
-    <img src="lilypng.png" class="lily r6">
-    <img src="lilypng.png" class="lily r7">
-    <img src="lilypng.png" class="lily r8">
-    <img src="lilypng.png" class="lily r9">
-    <img src="lilypng.png" class="lily r10">
+    <!-- 10 Lilies Right -->
+    <img src="lilypng.png" class="lily" style="right:-60px; top:0; --rot:4deg;">
+    <img src="lilypng.png" class="lily" style="right:-55px; top:80px; --rot:-3deg;">
+    <img src="lilypng.png" class="lily" style="right:-60px; top:160px; --rot:3deg;">
+    <img src="lilypng.png" class="lily" style="right:-55px; top:240px; --rot:-4deg;">
+    <img src="lilypng.png" class="lily" style="right:-60px; top:320px; --rot:2deg;">
+    <img src="lilypng.png" class="lily" style="right:-55px; top:400px; --rot:-3deg;">
+    <img src="lilypng.png" class="lily" style="right:-60px; top:480px; --rot:4deg;">
+    <img src="lilypng.png" class="lily" style="right:-55px; top:560px; --rot:-2deg;">
+    <img src="lilypng.png" class="lily" style="right:-60px; top:640px; --rot:3deg;">
+    <img src="lilypng.png" class="lily" style="right:-55px; top:720px; --rot:-1deg;">
 
     <div class="container">
         <h1 class="title">Palanca Letter yarn??</h1>
@@ -237,7 +222,6 @@
             p.className = "petal";
 
             let left = Math.random() * 100;
-
             p.style.left = left + "vw";
             p.style.width = 10 + Math.random() * 12 + "px";
             p.style.opacity = 0.4 + Math.random() * 0.5;
