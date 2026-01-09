@@ -5,9 +5,7 @@
     <meta charset="UTF-8">
     <title>4 Lyanne lahat yan</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Courier+Prime&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Courier+Prime&display=swap" rel="stylesheet">
 
     <style>
         body {
@@ -16,7 +14,7 @@
             font-family: 'Courier Prime', monospace;
             display: flex;
             justify-content: center;
-            padding: 20px 8px;
+            padding: 20px 10px;
             position: relative;
             overflow-x: hidden;
         }
@@ -30,6 +28,7 @@
             box-shadow: 0 14px 35px rgba(0, 0, 0, .18);
             position: relative;
             z-index: 5;
+            margin: 0 auto;
         }
 
         .container::after {
@@ -46,11 +45,6 @@
             font-size: 28px;
             color: #7b4f4f;
             margin-bottom: 18px;
-        }
-
-        .reading-column {
-            max-width: 320px;
-            margin: 0 auto;
         }
 
         .letter {
@@ -95,156 +89,33 @@
             fill: white;
         }
 
+        /* Right side lilies only */
         .lily {
             position: absolute;
             width: 100px;
-            opacity: .9;
+            opacity: 0.9;
             filter: blur(.2px);
             animation: float 6s ease-in-out infinite;
             z-index: 1;
-            clip-path: inset(0 0 42% 0);
         }
 
-        .l1 {
-            left: -95px;
-            top: -40px;
-            --flip: -1;
-            --rot: -5deg;
-        }
-
-        .l2 {
-            left: -95px;
-            top: 40px;
-            --flip: -1;
-            --rot: 4deg;
-        }
-
-        .l3 {
-            left: -95px;
-            top: 120px;
-            --flip: -1;
-            --rot: -3deg;
-        }
-
-        .l4 {
-            left: -95px;
-            top: 200px;
-            --flip: -1;
-            --rot: 5deg;
-        }
-
-        .l5 {
-            left: -95px;
-            top: 280px;
-            --flip: -1;
-            --rot: -4deg;
-        }
-
-        .l6 {
-            left: -95px;
-            top: 360px;
-            --flip: -1;
-            --rot: 3deg;
-        }
-
-        .l7 {
-            left: -95px;
-            top: 440px;
-            --flip: -1;
-            --rot: -2deg;
-        }
-
-        .l8 {
-            left: -95px;
-            top: 520px;
-            --flip: -1;
-            --rot: 4deg;
-        }
-
-        .l9 {
-            left: -95px;
-            top: 600px;
-            --flip: -1;
-            --rot: -3deg;
-        }
-
-        .l10 {
-            left: -95px;
-            top: 680px;
-            --flip: -1;
-            --rot: 3deg;
-        }
-
-        .r1 {
-            right: -95px;
-            top: -30px;
-            --rot: 4deg;
-        }
-
-        .r2 {
-            right: -95px;
-            top: 50px;
-            --rot: -3deg;
-        }
-
-        .r3 {
-            right: -95px;
-            top: 130px;
-            --rot: 3deg;
-        }
-
-        .r4 {
-            right: -95px;
-            top: 210px;
-            --rot: -4deg;
-        }
-
-        .r5 {
-            right: -95px;
-            top: 290px;
-            --rot: 3deg;
-        }
-
-        .r6 {
-            right: -95px;
-            top: 370px;
-            --rot: -2deg;
-        }
-
-        .r7 {
-            right: -95px;
-            top: 450px;
-            --rot: 4deg;
-        }
-
-        .r8 {
-            right: -95px;
-            top: 530px;
-            --rot: -3deg;
-        }
-
-        .r9 {
-            right: -95px;
-            top: 610px;
-            --rot: 3deg;
-        }
-
-        .r10 {
-            right: -95px;
-            top: 690px;
-            --rot: -2deg;
-        }
+        /* Varied top positions for more design */
+        .r1 { right: -70px; top: -20px; --rot: 5deg; }
+        .r2 { right: -50px; top: 50px; --rot: -3deg; }
+        .r3 { right: -90px; top: 120px; --rot: 4deg; }
+        .r4 { right: -60px; top: 190px; --rot: -5deg; }
+        .r5 { right: -80px; top: 260px; --rot: 3deg; }
+        .r6 { right: -50px; top: 330px; --rot: -2deg; }
+        .r7 { right: -70px; top: 400px; --rot: 6deg; }
+        .r8 { right: -60px; top: 470px; --rot: -4deg; }
+        .r9 { right: -80px; top: 540px; --rot: 2deg; }
+        .r10 { right: -50px; top: 610px; --rot: -3deg; }
+        .r11 { right: -70px; top: 680px; --rot: 4deg; }
+        .r12 { right: -60px; top: 750px; --rot: -5deg; }
 
         @keyframes float {
-
-            0%,
-            100% {
-                transform: translateY(0) scaleX(var(--flip, 1)) rotate(var(--rot, 0deg));
-            }
-
-            50% {
-                transform: translateY(-8px) scaleX(var(--flip, 1)) rotate(var(--rot, 0deg));
-            }
+            0%, 100% { transform: translateY(0) rotate(var(--rot,0deg)); }
+            50% { transform: translateY(-8px) rotate(var(--rot,0deg)); }
         }
 
         .petal {
@@ -257,13 +128,8 @@
         }
 
         @keyframes fall {
-            from {
-                transform: translateX(var(--drift)) translateY(-50px) rotate(0deg);
-            }
-
-            to {
-                transform: translateX(calc(var(--drift) + var(--wind))) translateY(110vh) rotate(var(--spin));
-            }
+            from { transform: translateX(var(--drift)) translateY(-50px) rotate(0deg); }
+            to { transform: translateX(calc(var(--drift) + var(--wind))) translateY(110vh) rotate(var(--spin)); }
         }
     </style>
 </head>
@@ -274,56 +140,47 @@
         <source src="music.mp3" type="audio/mp3">
     </audio>
 
-    <img src="lilypng.png" class="lily l1"><img src="lilypng.png" class="lily l2">
-    <img src="lilypng.png" class="lily l3"><img src="lilypng.png" class="lily l4">
-    <img src="lilypng.png" class="lily l5"><img src="lilypng.png" class="lily l6">
-    <img src="lilypng.png" class="lily l7"><img src="lilypng.png" class="lily l8">
-    <img src="lilypng.png" class="lily l9"><img src="lilypng.png" class="lily l10">
-
-    <img src="lilypng.png" class="lily r1"><img src="lilypng.png" class="lily r2">
-    <img src="lilypng.png" class="lily r3"><img src="lilypng.png" class="lily r4">
-    <img src="lilypng.png" class="lily r5"><img src="lilypng.png" class="lily r6">
-    <img src="lilypng.png" class="lily r7"><img src="lilypng.png" class="lily r8">
-    <img src="lilypng.png" class="lily r9"><img src="lilypng.png" class="lily r10">
+    <!-- Right side lilies only -->
+    <img src="lilypng.png" class="lily r1">
+    <img src="lilypng.png" class="lily r2">
+    <img src="lilypng.png" class="lily r3">
+    <img src="lilypng.png" class="lily r4">
+    <img src="lilypng.png" class="lily r5">
+    <img src="lilypng.png" class="lily r6">
+    <img src="lilypng.png" class="lily r7">
+    <img src="lilypng.png" class="lily r8">
+    <img src="lilypng.png" class="lily r9">
+    <img src="lilypng.png" class="lily r10">
+    <img src="lilypng.png" class="lily r11">
+    <img src="lilypng.png" class="lily r12">
 
     <div class="container">
-        <h1 class="title">Welcome Back to u!</h1>
+        <h1 class="title">Welcome Back to You!</h1>
 
-        <div class="reading-column">
-            <div class="letter">
-                <p>Dear <b>Lyanne Lei</b> ng Mundo,</p>
-
-                <p>
-                    Even though I’ve only known you for a short time, it’s been enough to see how determined and capable
-                    you
-                    are. As you continue your journey, I just want to wish you all the best. May your dreams slowly turn
-                    into reality, and may every goal you set for yourself be reached in your own time.
-                </p>
-
-                <p>
-                    I also want to take a moment to thank you. Thank you for being inspiring, for sharing your energy
-                    and
-                    positivity, and for reminding me of the importance of kindness and dedication. Your presence has
-                    made a
-                    difference, even in the little things, and I’m grateful to know you.
-                </p>
-
-                <p>
-                    Life is full of moments that can feel confusing, overwhelming, or like we don’t know which way to
-                    go.
-                    But always remember, you can lean on people who care about you—including me. I’m always ready to
-                    listen
-                    (and give unsolicited advice if needed HAHAHAHAHAHAA).
-                </p>
-
-                <p>
-                    Keep believing in yourself, keep moving forward, and never forget how much potential you have.
-                    <b>PUHON</b> :))
-                </p>
-            </div>
-
-            <div class="signature">— <b>Krystian Daniel Uy (sharksilog)</b></div>
+        <div class="letter">
+            <p>Dear <b>Lyanne Lei</b> ng Mundo,</p>
+            <p>
+                Even though I’ve only known you for a short time, it’s been enough to see how determined and capable you
+                are. As you continue your journey, I just want to wish you all the best. May your dreams slowly turn
+                into reality, and may every goal you set for yourself be reached in your own time.
+            </p>
+            <p>
+                I also want to take a moment to thank you. Thank you for being inspiring, for sharing your energy and
+                positivity, and for reminding me of the importance of kindness and dedication. Your presence has made a
+                difference, even in the little things, and I’m grateful to know you.
+            </p>
+            <p>
+                Life is full of moments that can feel confusing, overwhelming, or like we don’t know which way to go.
+                But always remember, you can lean on people who care about you—including me. I’m always ready to listen
+                (and give unsolicited advice if needed HAHAHAHAHAHAA).
+            </p>
+            <p>
+                Keep believing in yourself, keep moving forward, and never forget how much potential you have.
+                <b>PUHON</b> :))
+            </p>
         </div>
+
+        <div class="signature">— <b>Krystian Daniel Uy (sharksilog)</b></div>
 
         <div class="music">
             <button class="play-btn" onclick="document.getElementById('song').play()">
@@ -339,7 +196,7 @@
         const song = document.getElementById('song');
         song.volume = 0.25;
 
-        const petalCount = 40;
+        const petalCount = 50;
         for (let i = 0; i < petalCount; i++) {
             const p = document.createElement("img");
             p.src = "petal.png";
@@ -350,16 +207,13 @@
             p.style.opacity = 0.4 + Math.random() * 0.5;
             p.style.animationDuration = 8 + Math.random() * 10 + "s";
             p.style.animationDelay = Math.random() * 10 + "s";
-
             p.style.setProperty("--drift", "0px");
             p.style.setProperty("--wind", (Math.random() * 30 - 15) + "vw");
             p.style.setProperty("--spin", (Math.random() * 720 - 360) + "deg");
-
             p.style.filter += ` blur(${Math.random() * 2}px)`;
             document.body.appendChild(p);
         }
     </script>
-
 </body>
 
 </html>
