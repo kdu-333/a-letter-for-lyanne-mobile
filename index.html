@@ -112,9 +112,12 @@
         }
 
         @keyframes float {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: translateY(0) scaleX(var(--flip, 1)) rotate(var(--rot, 0deg));
             }
+
             50% {
                 transform: translateY(-8px) scaleX(var(--flip, 1)) rotate(var(--rot, 0deg));
             }
@@ -135,6 +138,7 @@
             from {
                 transform: translateX(var(--drift)) translateY(-50px) rotate(0deg);
             }
+
             to {
                 transform: translateX(calc(var(--drift) + var(--wind))) translateY(110vh) rotate(var(--spin));
             }
@@ -163,19 +167,22 @@
     <img src="lilypng.png" class="lily" style="right:-95px; top:320px; --rot:2deg;">
 
     <div class="container">
-        <h1 class="title"Welcome Back 2 u! ^_^</h1>
+        <h1 class="title">Welcome Back 2 u! ^_^</h1>
 
         <div class="letter">
             <p>Dear <b>Lyanne Lei</b> ng Mundo,</p>
 
             <p>
-                Even though I’ve only known you for a short time, it’s been enough to see how determined and capable you are.
-                As you continue your journey, I just want to wish you all the best. May your dreams slowly turn into reality,
+                Even though I’ve only known you for a short time, it’s been enough to see how determined and capable you
+                are.
+                As you continue your journey, I just want to wish you all the best. May your dreams slowly turn into
+                reality,
                 and may every goal you set for yourself be reached in your own time.
             </p>
 
             <p>
-                I also want to take a moment to thank you. Thank you for being inspiring, for sharing your energy and positivity,
+                I also want to take a moment to thank you. Thank you for being inspiring, for sharing your energy and
+                positivity,
                 and for reminding me of the importance of kindness and dedication. Your presence has made a difference,
                 even in the little things, and I’m grateful to know you.
             </p>
@@ -231,5 +238,5 @@
     </script>
 
 </body>
-</html>
 
+</html>
