@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <title>4 Lyanne lahat yan</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Courier+Prime&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Courier+Prime&display=swap"
+        rel="stylesheet">
 
     <style>
         body {
@@ -100,22 +101,118 @@
         }
 
         /* Varied top positions for more design */
-        .r1 { right: -70px; top: -20px; --rot: 5deg; }
-        .r2 { right: -50px; top: 50px; --rot: -3deg; }
-        .r3 { right: -90px; top: 120px; --rot: 4deg; }
-        .r4 { right: -60px; top: 190px; --rot: -5deg; }
-        .r5 { right: -80px; top: 260px; --rot: 3deg; }
-        .r6 { right: -50px; top: 330px; --rot: -2deg; }
-        .r7 { right: -70px; top: 400px; --rot: 6deg; }
-        .r8 { right: -60px; top: 470px; --rot: -4deg; }
-        .r9 { right: -80px; top: 540px; --rot: 2deg; }
-        .r10 { right: -50px; top: 610px; --rot: -3deg; }
-        .r11 { right: -70px; top: 680px; --rot: 4deg; }
-        .r12 { right: -60px; top: 750px; --rot: -5deg; }
+        .r1 {
+            right: -90px;
+            top: -20px;
+            --rot: 5deg;
+        }
+
+        .r2 {
+            right: -85px;
+            top: 50px;
+            --rot: -3deg;
+        }
+
+        .r3 {
+            right: -100px;
+            top: 120px;
+            --rot: 4deg;
+        }
+
+        .r4 {
+            right: -95px;
+            top: 190px;
+            --rot: -5deg;
+        }
+
+        .r5 {
+            right: -90px;
+            top: 260px;
+            --rot: 3deg;
+        }
+
+        .r6 {
+            right: -85px;
+            top: 330px;
+            --rot: -2deg;
+        }
+
+        .r7 {
+            right: -95px;
+            top: 400px;
+            --rot: 6deg;
+        }
+
+        .r8 {
+            right: -90px;
+            top: 470px;
+            --rot: -4deg;
+        }
+
+        .r9 {
+            right: -100px;
+            top: 540px;
+            --rot: 2deg;
+        }
+
+        .r10 {
+            right: -85px;
+            top: 610px;
+            --rot: -3deg;
+        }
+
+        .r11 {
+            right: -95px;
+            top: 680px;
+            --rot: 4deg;
+        }
+
+        .r12 {
+            right: -90px;
+            top: 750px;
+            --rot: -5deg;
+        }
+
+        .r13 {
+            right: -100px;
+            top: 820px;
+            --rot: 3deg;
+        }
+
+        .r14 {
+            right: -85px;
+            top: 890px;
+            --rot: -2deg;
+        }
+
+        .r15 {
+            right: -95px;
+            top: 960px;
+            --rot: 5deg;
+        }
+
+        .r16 {
+            right: -90px;
+            top: 1030px;
+            --rot: -4deg;
+        }
+
+        .r17 {
+            right: -100px;
+            top: 1100px;
+            --rot: 2deg;
+        }
 
         @keyframes float {
-            0%, 100% { transform: translateY(0) rotate(var(--rot,0deg)); }
-            50% { transform: translateY(-8px) rotate(var(--rot,0deg)); }
+
+            0%,
+            100% {
+                transform: translateY(0) rotate(var(--rot, 0deg));
+            }
+
+            50% {
+                transform: translateY(-8px) rotate(var(--rot, 0deg));
+            }
         }
 
         .petal {
@@ -128,8 +225,13 @@
         }
 
         @keyframes fall {
-            from { transform: translateX(var(--drift)) translateY(-50px) rotate(0deg); }
-            to { transform: translateX(calc(var(--drift) + var(--wind))) translateY(110vh) rotate(var(--spin)); }
+            from {
+                transform: translateX(var(--drift)) translateY(-50px) rotate(0deg);
+            }
+
+            to {
+                transform: translateX(calc(var(--drift) + var(--wind))) translateY(110vh) rotate(var(--spin));
+            }
         }
     </style>
 </head>
@@ -153,6 +255,11 @@
     <img src="lilypng.png" class="lily r10">
     <img src="lilypng.png" class="lily r11">
     <img src="lilypng.png" class="lily r12">
+    <img src="lilypng.png" class="lily r13">
+    <img src="lilypng.png" class="lily r14">
+    <img src="lilypng.png" class="lily r15">
+    <img src="lilypng.png" class="lily r16">
+    <img src="lilypng.png" class="lily r17">
 
     <div class="container">
         <h1 class="title">Welcome Back to You!</h1>
