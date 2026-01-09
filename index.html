@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>4 Lyanne lahat yan</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Courier+Prime&display=swap"
+        rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            background: #efe7d6;
+            font-family: 'Courier Prime', monospace;
+            display: flex;
+            justify-content: center;
+            padding: 80px 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .lily {
+            position: absolute;
+            width: 260px;
+            opacity: .92;
+            filter: blur(.2px);
+            animation: float 6s ease-in-out infinite;
+            z-index: 1;
+        }
+
+        .l1 {
+            left: -90px;
+            top: -60px;
+            --flip: -1;
+            --rot: -8deg;
+        }
+
+        .l2 {
+            left: -60px;
+            top: 130px;
+            --flip: -1;
+            --rot: 4deg;
+        }
+
+        .l3 {
+            left: -100px;
+            top: 310px;
+            --flip: -1;
+            --rot: -3deg;
+        }
+
+        .l4 {
+            left: -70px;
+            top: 520px;
+            --flip: -1;
+            --rot: 7deg;
+        }
+
+        .l5 {
+            left: -90px;
+            top: 760px;
+            --flip: -1;
+            --rot: -5deg;
+        }
+
+        .r1 {
+            right: -90px;
+            top: -40px;
+            --rot: 6deg;
+        }
+
+        .r2 {
+            right: -60px;
+            top: 160px;
+            --rot: -4deg;
+        }
+
+        .r3 {
+            right: -100px;
+            top: 350px;
+            --rot: 5deg;
+        }
+
+        .r4 {
+            right: -60px;
+            top: 560px;
+            --rot: -6deg;
+        }
+
+        .r5 {
+            right: -90px;
+            top: 800px;
+            --rot: 4deg;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0) scaleX(var(--flip, 1)) rotate(var(--rot, 0deg));
+            }
+
+            50% {
+                transform: translateY(-12px) scaleX(var(--flip, 1)) rotate(var(--rot, 0deg));
+            }
+        }
+
+        .container {
+            width: 760px;
+            max-width: 95%;
+            background: #fffdf6;
+            border-radius: 18px;
+            padding: 60px 55px;
+            box-shadow: 0 18px 40px rgba(0, 0, 0, .18);
+            position: relative;
+            z-index: 5;
+        }
+
+        .container:after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+            pointer-events: none;
+        }
+
+        .title {
+            font-family: 'Great Vibes', cursive;
+            text-align: center;
+            font-size: 48px;
+            color: #7b4f4f;
+            margin-bottom: 25px;
+        }
+
+        .letter {
+            font-size: 17px;
+            line-height: 1.9;
+            color: #3b2f2f;
+        }
+
+        .signature {
+            text-align: right;
+            margin-top: 45px;
+            font-family: 'Great Vibes', cursive;
+            font-size: 24px;
+            color: #7b4f4f;
+        }
+
+        .music {
+            display: flex;
+            justify-content: center;
+            margin-top: 35px;
+        }
+
+        .play-btn {
+            background: #7b4f4f;
+            color: white;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 30px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .play-btn:hover {
+            background: #9b6a6a;
+        }
+
+        .play-btn svg {
+            width: 18px;
+            fill: white;
+        }
+
+        .petal {
+            position: fixed;
+            top: -60px;
+            left: 0;
+            pointer-events: none;
+            z-index: 2;
+            animation: fall linear infinite;
+            filter: drop-shadow(0 0 6px rgba(255, 200, 220, .45));
+        }
+
+        @keyframes fall {
+            from {
+                transform: translateX(var(--drift)) translateY(-60px) rotate(0deg);
+            }
+
+            to {
+                transform: translateX(calc(var(--drift) + var(--wind))) translateY(110vh) rotate(var(--spin));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .title {
+                font-size: 36px;
+            }
+
+            .letter {
+                font-size: 16px;
+            }
+
+            .signature {
+                font-size: 20px;
+            }
+
+            .container {
+                padding: 40px 25px;
+            }
+
+            .lily {
+                width: 180px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .title {
+                font-size: 28px;
+            }
+
+            .letter {
+                font-size: 14px;
+                line-height: 1.7;
+            }
+
+            .signature {
+                font-size: 18px;
+            }
+
+            .container {
+                padding: 30px 15px;
+            }
+
+            .lily {
+                width: 140px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <audio id="song" loop>
+        <source src="music.mp3" type="audio/mp3">
+    </audio>
+
+    <img src="lilypng.png" class="lily l1">
+    <img src="lilypng.png" class="lily l2">
+    <img src="lilypng.png" class="lily l3">
+    <img src="lilypng.png" class="lily l4">
+    <img src="lilypng.png" class="lily l5">
+
+    <img src="lilypng.png" class="lily r1">
+    <img src="lilypng.png" class="lily r2">
+    <img src="lilypng.png" class="lily r3">
+    <img src="lilypng.png" class="lily r4">
+    <img src="lilypng.png" class="lily r5">
+
+    <div class="container">
+
+        <h1 class="title">Palanca Letter yarn??</h1>
+
+        <div class="letter">
+            <p>Dear <b>Lyanne Lei</b> ng Mundo,</p>
+
+            <p>
+                Even though I’ve only known you for a short time, it’s been enough to see how determined and capable you
+                are. As you continue your journey, I just want to wish you all the best. May your dreams slowly turn
+                into reality,
+                and may every goal you set for yourself be reached in your own time.
+            </p>
+
+            <p>
+                I also want to take a moment to thank you. Thank you for being inspiring, for sharing your energy and
+                positivity,
+                and for reminding me of the importance of kindness and dedication. Your presence has made a difference,
+                even in the little things, and I’m grateful to know you.
+            </p>
+
+            <p>
+                Life is full of moments that can feel confusing, overwhelming, or like we don’t know which way to go.
+                But always remember, you can lean on people who care about you—including me. I’m always ready to listen
+                (and give unsolicited advice if needed HAHAHAHAHAHAA).
+            </p>
+
+            <p>
+                Keep believing in yourself, keep moving forward, and never forget how much potential you have.
+                <b>PUHON</b> :))
+            </p>
+        </div>
+
+        <div class="signature">— <b>Krystian Daniel Uy (sharksilog)</b></div>
+
+        <div class="music">
+            <button class="play-btn" onclick="document.getElementById('song').play()">
+                <svg viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z" />
+                </svg>
+                Play Music
+            </button>
+        </div>
+
+    </div>
+
+    <script>
+        const petalCount = 60;
+
+        for (let i = 0; i < petalCount; i++) {
+            const p = document.createElement("img");
+            p.src = "petal.png";
+            p.className = "petal";
+
+            let left = Math.random() * 100;
+
+            p.style.left = left + "vw";
+            p.style.width = 10 + Math.random() * 14 + "px";
+            p.style.opacity = 0.4 + Math.random() * 0.5;
+            p.style.animationDuration = 10 + Math.random() * 12 + "s";
+            p.style.animationDelay = Math.random() * 12 + "s";
+
+            p.style.setProperty("--drift", "0px");
+            p.style.setProperty("--wind", (Math.random() * 40 - 20) + "vw");
+            p.style.setProperty("--spin", (Math.random() * 720 - 360) + "deg");
+
+            p.style.filter += ` blur(${Math.random() * 2}px)`;
+
+            document.body.appendChild(p);
+        }
+
+        const song = document.getElementById('song');
+        song.volume = 0.25;
+
+        function adjustLilies() {
+            const width = window.innerWidth;
+
+            const leftLilies = [document.querySelector('.l1'), document.querySelector('.l2'), document.querySelector('.l3'), document.querySelector('.l4'), document.querySelector('.l5')];
+            const rightLilies = [document.querySelector('.r1'), document.querySelector('.r2'), document.querySelector('.r3'), document.querySelector('.r4'), document.querySelector('.r5')];
+
+            if (width < 480) {
+                leftLilies.forEach((lily, i) => lily.style.left = `-${90 - i * 5}px`);
+                rightLilies.forEach((lily, i) => lily.style.right = `-${90 - i * 5}px`);
+            } else if (width < 768) {
+                leftLilies.forEach((lily, i) => lily.style.left = `-${60 - i * 5}px`);
+                rightLilies.forEach((lily, i) => lily.style.right = `-${60 - i * 5}px`);
+            } else {
+                leftLilies.forEach((lily, i) => lily.style.left = "");
+                rightLilies.forEach((lily, i) => lily.style.right = "");
+            }
+        }
+
+        window.addEventListener('resize', adjustLilies);
+        window.addEventListener('load', adjustLilies);
+    </script>
+
+</body>
+
+</html>
